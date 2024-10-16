@@ -1,8 +1,12 @@
+#include <cstddef>
+#include "matrix.cpp"
 #include <iostream>
 
 int main()
 {
-  size_t M = 0, N = 0;
-  std::cin >> M >> N;
-  std::cout << M << " " << N << "\n";
+  createMatrix();
+  input();
+  output();
+  destroyMemory();
 }
+
