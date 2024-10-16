@@ -1,3 +1,4 @@
+
 #include <cstddef>
 #include <iostream>
 #include "matrix.hpp"
@@ -35,3 +36,11 @@ void memoryDestroy (int** t, size_t m)
 }
 
 int** createMemory(size_t m, size_t n)
+{
+  int ** t = new int*[m];
+  size_t created = 0;
+  try
+  {
+    for 
+  }
+}
