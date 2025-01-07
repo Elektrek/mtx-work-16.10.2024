@@ -6,33 +6,35 @@ int main()
   size_t n = 0, m = 0;
   std::cin >> m >> n;
 
-  if (!std::cin || std::cin.eof())
+  if (!std::cin)
   {
-    std::cerr << "Wrong input!\n";
     return 1;
   }
 
-  int** t = nullptr;
+  Matrix arr(m, n);
 
   try
   {
-    t = createMatrix(m, n);
+    arr.inMtx();
   }
   catch (const std::bad_alloc & e)
   {
-    destroyMatrix(t, m);
     std::cerr << "Out of memory!\n";
     return 1;
   }
 
-  input(t, m, n);
-  if (!std::cin || std::cin.eof())
+  arr.outMtx();
+
+  std::cin >> m >> n;
+  if (!std::cin)
   {
-    std::cerr << "Wrong input!\n";
     return 1;
   }
 
-  out(t, m, n);
-  destroyMatrix(t, m);
+  arr.changeSize(m, n)
+  arr.outMtx();
+
+  Matrix scnd_arr(arr);
+  second_arr.outMtx();
 }
 
